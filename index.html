@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Campo Minado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #game-container {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        th {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #aaa;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+/* 
+        th.bomb {
+            background-color: #333;
+            color: #fff;
+        } */
+
+        th.point {
+            background-color: #ffd700;
+        }
+
+        #info {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        label {
+            margin-right: 5px;
+        }
+
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div>
+            <label for="table-size">Tamanho da Tabela:</label>
+            <input type="number" id="table-size" min="5" max="20" value="10">
+            <button id="change-size">Jogar</button>
+        </div>
+        <table id="game-table"></table>
+        <div id="info">
+            <p id="lives"></p>
+            <p id="points"></p>
+            <p id="testCount"></p>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
